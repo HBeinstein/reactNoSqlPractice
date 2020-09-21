@@ -5,7 +5,7 @@ import { useFirestore } from 'react-redux-firebase';
 
 function NewTicketForm(props){
 
-  const firestore = useFirestore();
+  const firestore = useFirestore(); // gives us access to firestore's methods like .add, .delete, .get
 
   function addTicketToFirestore(event) {
     event.preventDefault();
@@ -36,6 +36,6 @@ NewTicketForm.propTypes = {
 export default NewTicketForm;
 
 // Is this still shared state, or are we now updating local state? If it's shared where are we accessing the firestoreReducer/state slice?
-// Why do we need redux if we are using a database now? Are we replacing the store?
+// Do we need redux if we are using a database now? A: hooks allow state to be more easily accessed
 // Why do we still need reducers/what are they doing? Do we need reducers and a store and a database?
 // Do we need actions at all? We only use toggleForm now; could we use a hook to update that state instead?

@@ -10,7 +10,7 @@ function TicketList(props){
     { collection: 'tickets' }
   ]);
 
-  const tickets = useSelector(state => state.firestore.ordered.tickets);
+  const tickets = useSelector(state => state.firestore.ordered.tickets); // ordered list!
 
   if (isLoaded(tickets)) {
     return (
